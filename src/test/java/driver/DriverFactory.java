@@ -37,7 +37,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
             case IOS -> appiumDriver = new IOSDriver<>(desiredCap);
         }
 
-        appiumDriver.manage().timeouts().implicitlyWait(1, TimeUnit.SECONDS);
+        appiumDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         return appiumDriver;
     }
 }
