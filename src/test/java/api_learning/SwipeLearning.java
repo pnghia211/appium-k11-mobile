@@ -42,7 +42,6 @@ public class SwipeLearning {
             } else {
                 swipe.swipeLeft();
             }
-
         }
     }
 }

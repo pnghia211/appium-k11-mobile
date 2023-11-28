@@ -13,7 +13,8 @@ public class IUSelector {
         MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
         navLoginBtn.click();
 
-        MobileElement textDesc = appiumDriver.findElement(MobileBy.AndroidUIAutomator("new UiSelector().textContains(\"When the device\")"));
+        MobileElement textDesc = appiumDriver.findElement(MobileBy.AndroidUIAutomator
+                ("new UiSelector().textContains(\"When the device\")"));
         System.out.println(textDesc.getText());
     }
 }

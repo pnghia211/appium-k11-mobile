@@ -12,7 +12,7 @@ import java.util.List;
 public class XpathLearning {
     public static void main(String[] args) {
 
-            AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
 
         try {
             MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));

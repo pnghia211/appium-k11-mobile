@@ -41,15 +41,15 @@ public class SwipeEx {
         int xStartPoint = 50 * getScreenWidth() / 100;
         int xEndPoint = 50 * getScreenWidth() / 100;
 
-        int yStartPoint = 50 * getScreenHeight() / 100;
-        int yEndPoint = 10 * getScreenHeight() / 100;
+        int yStartPoint = 5 * getScreenHeight() / 100;
+        int yEndPoint = 80 * getScreenHeight() / 100;
 
         // Convert coordinate
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
         PointOption endPoint = new PointOption<>().withCoordinates(xEndPoint, yEndPoint);
         TouchAction touchAction = new TouchAction(appiumDriver);
-        touchAction.press(endPoint).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
-                .moveTo(startPoint).release().perform();
+        touchAction.press(startPoint).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
+                .moveTo(endPoint).release().perform();
     }
 
     public void swipeLeft () {
