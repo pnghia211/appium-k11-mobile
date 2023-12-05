@@ -1,16 +1,14 @@
 package models.pages;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import models.components.global.BottomNavComponent;
 import models.components.login.LoginFormComponent;
-import org.openqa.selenium.By;
 
-public class LoginScreen {
+public class MainScreen {
     private final AppiumDriver<MobileElement> appiumDriver;
 
-    public LoginScreen(AppiumDriver<MobileElement> appiumDriver) {
+    public MainScreen(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
 
