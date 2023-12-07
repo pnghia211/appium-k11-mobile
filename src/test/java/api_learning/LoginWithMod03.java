@@ -5,6 +5,7 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import models.pages.LoginScreenMod03;
+import org.testng.asserts.SoftAssert;
 import platform.Platform;
 
 public class LoginWithMod03 {
@@ -24,6 +25,8 @@ public class LoginWithMod03 {
             e.printStackTrace();
         }
 
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertAll();
         appiumDriver.quit();
     }
 }

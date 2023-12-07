@@ -14,17 +14,14 @@ public class LoginScreenMod03 {
     public LoginScreenMod03(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
-
     public LoginScreenMod03 inputUserName(String userNameTxt) {
         if (!userNameTxt.isEmpty()) appiumDriver.findElement(userNameSel).sendKeys(userNameTxt);
         return this;
     }
-
     public LoginScreenMod03 inputPassword(String passwordTxt) {
         if (!passwordTxt.isEmpty()) appiumDriver.findElement(passwordSel).sendKeys(passwordTxt);
         return this;
     }
-
     public void clickLoginBtn() {
         appiumDriver.findElement(loginBtnSel).click();
     }

@@ -5,6 +5,8 @@ import io.appium.java_client.MobileElement;
 import models.components.login.LoginFormComponent;
 import models.pages.MainScreen;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.testng.Assert;
+import support.Verify;
 import test_flows.BaseFlow;
 
 public class LoginFlow extends BaseFlow {
@@ -52,27 +54,20 @@ public class LoginFlow extends BaseFlow {
     }
 
     private void verifyValidLogin(LoginFormComponent loginFormComp) {
-        String expectedLoginDialogString = "OK";
+        String expectedLoginDialogString = "Success";
         String actualLoginDialogString = loginFormComp.verifyValidLoginStr();
-        if (expectedLoginDialogString.equals(actualLoginDialogString)) {
-            System.out.println("Verify login successfully!!!");
-        } else System.out.println("Verify login fail");
+        Assert.assertEquals(expectedLoginDialogString,actualLoginDialogString);
     }
 
     private void verifyInvalidEmail(LoginFormComponent loginFormComp) {
         String expectedEmailString = "Please enter a valid email address";
         String actualEmailString = loginFormComp.verifyInvalidEmailStr();
-        if (expectedEmailString.equals(actualEmailString)) {
-            System.out.println("Verify invalid email successfully!!!");
-        } else System.out.println("Verify invalid email fail");
+        Assert.assertEquals(expectedEmailString,actualEmailString);
     }
 
     private void verifyInvalidPassword(LoginFormComponent loginFormComp) {
         String expectedPasswordString = "Please enter at least 8 characters";
         String actualPasswordString = loginFormComp.verifyInvalidPasswordStr();
-        if (expectedPasswordString.equals(actualPasswordString)) {
-            System.out.println("Verify invalid password successfully!!!");
-        } else System.out.println("Verify invalid password fail");
-
+        Assert.assertEquals(expectedPasswordString,actualPasswordString);
     }
 }
