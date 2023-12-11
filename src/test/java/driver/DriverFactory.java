@@ -6,6 +6,7 @@ import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import platform.Platform;
+import support.MobileCapabilityTypeEx;
 
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -38,6 +39,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         }
 
         appiumDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+
         return appiumDriver;
     }
 }

@@ -6,7 +6,6 @@ import models.components.login.LoginFormComponent;
 import models.pages.MainScreen;
 import org.apache.commons.validator.routines.EmailValidator;
 import org.testng.Assert;
-import support.Verify;
 import test_flows.BaseFlow;
 
 public class LoginFlow extends BaseFlow {

@@ -1,7 +1,7 @@
 package api_learning;
 
 import driver.DriverFactory;
-import driver.MobileCapabilityTypeEx;
+import support.MobileCapabilityTypeEx;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.internal.CapabilityHelpers;

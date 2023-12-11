@@ -38,7 +38,7 @@ public class LoginFormComponent {
 
     public String verifyValidLoginStr() {
         WebDriverWait wait = new WebDriverWait(appiumDriver,2000);
-        wait.until(ExpectedConditions.visibilityOf(appiumDriver.findElement(validLoginSel)));
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(validLoginSel));
         return appiumDriver.findElement(validLoginSel).getText();
     }
 
