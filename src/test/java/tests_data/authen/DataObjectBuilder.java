@@ -25,6 +25,7 @@ public class DataObjectBuilder {
             throw new RuntimeException(e.getMessage());
         }
 
+        System.out.println(absoluteFilePath);
         return objectData;
     }
 }

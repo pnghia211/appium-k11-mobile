@@ -8,4 +8,11 @@
             <class name="tests.testNG.TestParameter01"/>
         </classes>
     </test>
+    <test name="Test 02">
+        <parameter name="udid" value="emulator-5556"/>
+        <parameter name="systemPort" value="8400"/>
+        <classes>
+            <class name="tests.testNG.TestParameter02"/>
+        </classes>
+    </test>
 </suite>

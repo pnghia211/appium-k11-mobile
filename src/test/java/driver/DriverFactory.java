@@ -12,6 +12,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 public class DriverFactory implements MobileCapabilityTypeEx {
+    private AppiumDriver<MobileElement> appiumDriver;
 
     public static AppiumDriver<MobileElement> getDriver(Platform platform) {
         AppiumDriver<MobileElement> appiumDriver = null;
@@ -41,5 +42,45 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         appiumDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
 
         return appiumDriver;
+    }
+
+    public AppiumDriver<MobileElement> getDriver(Platform platform, String udid, String systemPort) {
+
+        if(appiumDriver == null){
+            DesiredCapabilities desiredCap = new DesiredCapabilities();
+            desiredCap.setCapability(PLATFORM_NAME, "Android");
+            desiredCap.setCapability(AUTOMATION_NAME, "uiautomator2");
+            desiredCap.setCapability(UDID, udid);
+            desiredCap.setCapability(APP_PACKAGE, "com.wdiodemoapp");
+            desiredCap.setCapability(APP_ACTIVITY, "com.wdiodemoapp.MainActivity");
+            desiredCap.setCapability(SYSTEM_PORT, systemPort);
+            URL appiumServer = null;
+
+            try {
+                appiumServer = new URL("http://localhost:4723/wd/hub");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            if (appiumServer == null) {
+                throw new RuntimeException("[ERR] cant construct the appium server " + appiumServer);
+            }
+
+            switch (platform) {
+                case ANDROID -> appiumDriver = new AndroidDriver<>(desiredCap);
+                case IOS -> appiumDriver = new IOSDriver<>(desiredCap);
+            }
+
+            appiumDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+        }
+
+        return appiumDriver;
+    }
+
+    public void quitAppium() {
+        if(appiumDriver != null) {
+            appiumDriver.quit();
+            appiumDriver = null;
+        }
     }
 }

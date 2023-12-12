@@ -11,7 +11,8 @@ public class LoginDevice02 extends BaseTest {
 
     @Test(dataProvider = "loginCredData")
     public void testLogin(LoginData loginData) {
-        LoginFlow loginFlow = new LoginFlow(appiumDriver, loginData.getEmail(), loginData.getPassword());
+        System.out.println("Session ID : "+getDriver().getSessionId());
+        LoginFlow loginFlow = new LoginFlow(getDriver(), loginData.getEmail(), loginData.getPassword());
         loginFlow.goToLoginScreen();
         loginFlow.login();
         loginFlow.verifyLogin();
