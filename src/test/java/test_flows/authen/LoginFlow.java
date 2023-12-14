@@ -65,7 +65,7 @@ public class LoginFlow extends BaseFlow {
     }
 
     private void verifyInvalidPassword(LoginFormComponent loginFormComp) {
-        String expectedPasswordString = "Please enter at least 8 characters";
+        String expectedPasswordString = "Please enter at least 8 characters_";
         String actualPasswordString = loginFormComp.verifyInvalidPasswordStr();
         Assert.assertEquals(expectedPasswordString,actualPasswordString);
     }
