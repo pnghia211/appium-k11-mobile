@@ -9,13 +9,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import platform.Platform;
 import support.SwipeEx;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class SwipeLearning {
     public static void main(String[] args) {
 
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 
         WebDriverWait wait = new WebDriverWait(appiumDriver, 3);
         MobileElement navSwipeEle = appiumDriver.findElement(MobileBy.AccessibilityId("Swipe"));

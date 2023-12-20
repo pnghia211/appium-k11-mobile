@@ -16,7 +16,7 @@ import java.util.List;
 
 public class HybridContext implements Contexts {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 
         try {
             MobileElement navWebViewBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Webview"));

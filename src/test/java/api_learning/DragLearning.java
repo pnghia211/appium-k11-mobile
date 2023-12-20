@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class DragLearning {
 
-    static AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+    static AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
     public static void main(String[] args) {
 
         MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Drag"));

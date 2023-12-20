@@ -15,7 +15,7 @@ import java.io.File;
 public class Screenshot {
     public static void main(String[] args) {
 
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         WebDriverWait wait = new WebDriverWait(appiumDriver, 1);
 
         try {

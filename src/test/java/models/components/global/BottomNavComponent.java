@@ -24,6 +24,8 @@ public class BottomNavComponent {
     }
 
     public void clickNavLoginBtn () {
+        WebDriverWait wait = new WebDriverWait(appiumDriver,10);
+        wait.until(ExpectedConditions.visibilityOfAllElementsLocatedBy(navLoginBtn));
         appiumDriver.findElement(navLoginBtn).click();
     }
 }

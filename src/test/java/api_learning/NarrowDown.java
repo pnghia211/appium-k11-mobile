@@ -4,8 +4,6 @@ import driver.DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import io.appium.java_client.internal.CapabilityHelpers;
-import org.openqa.selenium.Capabilities;
 import platform.Platform;
 import support.SwipeEx;
 
@@ -13,7 +11,7 @@ import java.util.List;
 
 public class NarrowDown {
     public static void main(String[] args) throws InterruptedException {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         Thread.sleep(2000);
 
         try {

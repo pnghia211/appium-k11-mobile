@@ -9,7 +9,7 @@ import platform.Platform;
 
 public class LoginWithMod02 {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 
         try {
             MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));

@@ -16,7 +16,7 @@ public class BaseFlow {
     public void goToFormScreen () {
         MainScreen mainScreen = new MainScreen(appiumDriver);
         BottomNavComponent bottomNavComp = mainScreen.bottomNavComp();
-        bottomNavComp.clickNavLoginBtn();
+        bottomNavComp.clickNavFormsBtn();
     }
 
     public void goToLoginScreen () {

@@ -2,6 +2,7 @@ package models.pages;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
+import models.components.Forms.FormsComponent;
 import models.components.global.BottomNavComponent;
 import models.components.login.LoginFormComponent;
 
@@ -18,5 +19,8 @@ public class MainScreen {
 
     public LoginFormComponent loginFormComp() {
         return new LoginFormComponent(appiumDriver);
+    }
+    public FormsComponent formsComp() {
+        return new FormsComponent(appiumDriver);
     }
 }

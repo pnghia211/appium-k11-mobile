@@ -8,14 +8,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import platform.AppPackage;
 import platform.Platform;
-import support.SwipeEx;
 
 import java.time.Duration;
-import java.util.List;
 
 public class MultipleApps {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
         WebDriverWait wait = new WebDriverWait(appiumDriver,2);
 
         try {

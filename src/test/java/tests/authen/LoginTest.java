@@ -8,15 +8,13 @@ import platform.Platform;
 import test_flows.authen.LoginFlow;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class LoginTest {
 
     @Test
     public static void testLogin() {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 //        Map<String, String> loginMap = new HashMap<>();
         List<loginData> loginDataList = new ArrayList<>();
         loginDataList.add(new loginData("teo@","12345678"));

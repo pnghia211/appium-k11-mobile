@@ -8,14 +8,11 @@ import org.testng.annotations.Test;
 import platform.Platform;
 import test_flows.authen.LoginFlow;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class LoginTestWithDataProvider {
 
     @Test(dataProvider = "loginCredData")
     public static void testLogin(loginData loginData) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 
         try {
                 LoginFlow loginFlow = new LoginFlow(appiumDriver, loginData.getEmail(), loginData.getPassword());

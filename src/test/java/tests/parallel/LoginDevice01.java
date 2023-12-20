@@ -11,11 +11,11 @@ public class LoginDevice01 extends BaseTest {
 
     @Test(dataProvider = "loginCredData")
     public void testLogin(LoginData loginData) {
-        System.out.println("Session ID : "+getDriver().getSessionId());
         LoginFlow loginFlow = new LoginFlow(getDriver(), loginData.getEmail(), loginData.getPassword());
         loginFlow.goToLoginScreen();
         loginFlow.login();
         loginFlow.verifyLogin();
+        System.out.println("Session ID : " + getDriver().getSessionId());
     }
 
     @DataProvider

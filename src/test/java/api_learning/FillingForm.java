@@ -13,7 +13,7 @@ import java.util.List;
 
 public class FillingForm {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.ANDROID);
+        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 
         MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Forms"));
         navLoginBtn.click();
