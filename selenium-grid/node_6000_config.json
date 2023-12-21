@@ -4,7 +4,7 @@
     {
       "version":"6",
       "maxInstances": 1,
-      "platform":"ANDROID",
+      "platform":"android",
       "deviceName":"Pixel 6",
       "udid" : "emulator-5554"
     }

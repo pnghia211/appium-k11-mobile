@@ -1,0 +1,467 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="9" passed="0" failed="7" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-12-21T17:49:11 ICT" name="Regression" finished-at="2023-12-21T17:49:12 ICT" duration-ms="182">
+    <groups>
+    </groups>
+    <test started-at="2023-12-21T17:49:11 ICT" name="emulator-5554" finished-at="2023-12-21T17:49:12 ICT" duration-ms="134">
+      <class name="tests.parallel.FillForms">
+        <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.parallel.FillForms@4229bb3f]" started-at="2023-12-21T17:49:11 ICT" name="initAppiumSession" finished-at="2023-12-21T17:49:11 ICT" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[emulator-5554]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8885]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[platformVersion]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAppiumSession -->
+        <test-method signature="testForms()[pri:0, instance:tests.parallel.FillForms@4229bb3f]" started-at="2023-12-21T17:49:11 ICT" name="testForms" finished-at="2023-12-21T17:49:12 ICT" duration-ms="42" status="FAIL">
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[[ERR] please provide env variable [remote]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: [ERR] please provide env variable [remote]
+at driver.DriverFactory.getDriver(DriverFactory.java:54)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.FillForms.testForms(FillForms.java:12)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForms -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.FillForms@4229bb3f]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testForms status=FAILURE method=FillForms.testForms()[pri:0, instance:tests.parallel.FillForms@4229bb3f] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.parallel.FillForms@4229bb3f]" started-at="2023-12-21T17:49:12 ICT" name="quitAppiumSession" finished-at="2023-12-21T17:49:12 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAppiumSession -->
+      </class> <!-- tests.parallel.FillForms -->
+    </test> <!-- emulator-5554 -->
+    <test started-at="2023-12-21T17:49:11 ICT" name="emulator-5556" finished-at="2023-12-21T17:49:12 ICT" duration-ms="182">
+      <class name="tests.parallel.LoginDevice02">
+        <test-method signature="testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452]" started-at="2023-12-21T17:49:12 ICT" name="testLogin" data-provider="loginCredData" finished-at="2023-12-21T17:49:12 ICT" duration-ms="2" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginData{email='teo@', password='12345678'}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Name is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Name is null
+at java.base/java.lang.Enum.valueOf(Enum.java:271)
+at platform.Platform.valueOf(Platform.java:3)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.LoginDevice02.testLogin(LoginDevice02.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=FAILURE method=LoginDevice02.testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452]" started-at="2023-12-21T17:49:12 ICT" name="testLogin" data-provider="loginCredData" finished-at="2023-12-21T17:49:12 ICT" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginData{email='teo@sth.com', password='1234567'}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Name is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Name is null
+at java.base/java.lang.Enum.valueOf(Enum.java:271)
+at platform.Platform.valueOf(Platform.java:3)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.LoginDevice02.testLogin(LoginDevice02.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=FAILURE method=LoginDevice02.testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452]" started-at="2023-12-21T17:49:12 ICT" name="testLogin" data-provider="loginCredData" finished-at="2023-12-21T17:49:12 ICT" duration-ms="0" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginData{email='teo@sth.com', password='12345678'}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Name is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Name is null
+at java.base/java.lang.Enum.valueOf(Enum.java:271)
+at platform.Platform.valueOf(Platform.java:3)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.LoginDevice02.testLogin(LoginDevice02.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="2" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=FAILURE method=LoginDevice02.testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice02@4de4b452] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+      </class> <!-- tests.parallel.LoginDevice02 -->
+      <class name="tests.parallel.LoginDevice01">
+        <test-method is-config="true" signature="initAppiumSession(java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:11 ICT" name="initAppiumSession" finished-at="2023-12-21T17:49:11 ICT" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[emulator-5556]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[8729]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[android]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[platformVersion]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initAppiumSession -->
+        <test-method signature="testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="testLogin" data-provider="loginCredData" finished-at="2023-12-21T17:49:12 ICT" duration-ms="17" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginData{email='teo@', password='12345678'}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[[ERR] please provide env variable [remote]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: [ERR] please provide env variable [remote]
+at driver.DriverFactory.getDriver(DriverFactory.java:54)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.LoginDevice01.testLogin(LoginDevice01.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=FAILURE method=LoginDevice01.testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="testLogin" data-provider="loginCredData" finished-at="2023-12-21T17:49:12 ICT" duration-ms="1" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginData{email='teo@sth.com', password='1234567'}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[[ERR] please provide env variable [remote]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: [ERR] please provide env variable [remote]
+at driver.DriverFactory.getDriver(DriverFactory.java:54)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.LoginDevice01.testLogin(LoginDevice01.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=FAILURE method=LoginDevice01.testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method signature="testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="testLogin" data-provider="loginCredData" finished-at="2023-12-21T17:49:12 ICT" duration-ms="0" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[LoginData{email='teo@sth.com', password='12345678'}]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.IllegalArgumentException">
+            <message>
+              <![CDATA[[ERR] please provide env variable [remote]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.IllegalArgumentException: [ERR] please provide env variable [remote]
+at driver.DriverFactory.getDriver(DriverFactory.java:54)
+at tests.BaseTest.getDriver(BaseTest.java:31)
+at tests.parallel.LoginDevice01.testLogin(LoginDevice01.java:14)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:677)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:221)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:969)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:194)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:829)
+at org.testng.TestRunner.run(TestRunner.java:602)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:437)
+at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:475)
+at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
+at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+at java.base/java.lang.Thread.run(Thread.java:842)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.IllegalArgumentException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogin -->
+        <test-method is-config="true" signature="takeScreenshot(org.testng.ITestResult)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="takeScreenshot" description="Taking screenshot if test fail" finished-at="2023-12-21T17:49:12 ICT" duration-ms="18" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testLogin status=FAILURE method=LoginDevice01.testLogin(tests_data.models.LoginData)[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- takeScreenshot -->
+        <test-method is-config="true" signature="quitAppiumSession()[pri:0, instance:tests.parallel.LoginDevice01@3514a4c0]" started-at="2023-12-21T17:49:12 ICT" name="quitAppiumSession" finished-at="2023-12-21T17:49:12 ICT" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- quitAppiumSession -->
+      </class> <!-- tests.parallel.LoginDevice01 -->
+    </test> <!-- emulator-5556 -->
+  </suite> <!-- Regression -->
+</testng-results>
