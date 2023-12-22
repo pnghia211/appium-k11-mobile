@@ -27,7 +27,7 @@ public class LoginFormComponent {
 
     public LoginFormComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
-//        PageFactory.initElements(new AppiumFieldDecorator(appiumDriver, Duration.ofSeconds(10)),this);
+        PageFactory.initElements(new AppiumFieldDecorator(appiumDriver, Duration.ofSeconds(10)),this);
     }
 
     @Step("Input username as {userNameTxt}")
@@ -53,20 +53,20 @@ public class LoginFormComponent {
     }
 
 
-//    @AndroidFindBy(xpath = "//*[contains(@text, \"Please enter a valid email address\")]")
-//    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Please enter a valid email address\"")
-//    private MobileElement invalidEmailStr;
+    @AndroidFindBy(xpath = "//*[contains(@text, \"Please enter a valid email address\")]")
+    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Please enter a valid email address\"")
+    private MobileElement invalidEmailStr;
 
     public String verifyInvalidEmailStr() {
-        return appiumDriver.findElement(invalidEmailSel).getText();
+        return invalidEmailStr.getText();
     }
 
-//    @AndroidFindBy(xpath = "//*[contains(@text, \"Please enter at least 8 characters\")]")
-//    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Please enter at least 8 characters\"")
-//    private MobileElement invalidPasswordStr;
+    @AndroidFindBy(xpath = "//*[contains(@text, \"Please enter at least 8 characters\")]")
+    @iOSXCUITFindBy(iOSNsPredicate = "label == \"Please enter at least 8 characters\"")
+    private MobileElement invalidPasswordStr;
 
     public String verifyInvalidPasswordStr() {
-        return appiumDriver.findElement(invalidPasswordSel).getText();
+        return invalidPasswordStr.getText();
     }
 
     @Step("Click login button")
