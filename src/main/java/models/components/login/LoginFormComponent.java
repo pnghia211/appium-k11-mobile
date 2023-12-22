@@ -58,14 +58,14 @@ public class LoginFormComponent {
     private MobileElement invalidEmailStr;
 
     public String verifyInvalidEmailStr() {
-        return invalidEmailStr.getText();
+        return appiumDriver.findElement(invalidEmailSel).getText();
     }
 
     @AndroidFindBy(xpath = "//*[contains(@text, \"Please enter at least 8 characters\")]")
     @iOSXCUITFindBy(iOSNsPredicate = "label == \"Please enter at least 8 characters\"")
     private MobileElement invalidPasswordStr;
     public String verifyInvalidPasswordStr() {
-        return invalidPasswordStr.getText();
+        return appiumDriver.findElement(invalidPasswordSel).getText();
     }
 
     @Step("Click login button")

@@ -54,7 +54,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
             throw new IllegalArgumentException("[ERR] please provide env variable [remote]");
         }
 
-        String targetServer = "http://192.168.1.140:4723/wd/hub";
+        String targetServer = "http://192.168.1.140:4444/wd/hub";
         if (isRemote.equals("true")) {
             String hubIPAdd = System.getenv("hub");
             if (hubIPAdd == null) System.getProperty("hub");
@@ -72,11 +72,9 @@ public class DriverFactory implements MobileCapabilityTypeEx {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
             if (appiumServer == null) {
                 throw new RuntimeException("Cannot connect to selenium grid");
             }
-
             DesiredCapabilities desiredCap = new DesiredCapabilities();
             desiredCap.setCapability(PLATFORM_NAME, platform);
 

@@ -6,7 +6,8 @@
         <parameter name="udid" value="emulator-5554"/>
         <parameter name="systemPort" value="8300"/>
         <classes>
-            <class name="tests.parallel.LoginDevice02"/>
+            <class name="tests.parallel.FillForms"/>
+<!--            <class name="tests.parallel.FillForms"/>-->
         </classes>
     </test>
     <test name="Test 02">
@@ -14,25 +15,25 @@
         <parameter name="udid" value="emulator-5556"/>
         <parameter name="systemPort" value="8400"/>
         <classes>
-            <class name="tests.parallel.FillForms"/>
+            <class name="tests.parallel.LoginDevice01"/>
         </classes>
     </test>
-    <test name="Test 03">
-        <parameter name="platformName" value="ios"/>
-        <parameter name="udid" value="iPhone 12"/>
-        <parameter name="platformVersion" value="12.0"/>
-        <parameter name="systemPort" value="8562"/>
-        <classes>
-            <class name="tests.parallel.FillForms"/>
-        </classes>
-    </test>
-    <test name="Test 04">
-        <parameter name="platformName" value="ios"/>
-        <parameter name="udid" value="iPhone 13"/>
-        <parameter name="platformVersion" value="13.0"/>
-        <parameter name="systemPort" value="8563"/>
-        <classes>
-            <class name="tests.parallel.FillForms"/>
-        </classes>
-    </test>
+<!--    <test name="Test 03">-->
+<!--        <parameter name="platformName" value="ios"/>-->
+<!--        <parameter name="udid" value="iPhone 12"/>-->
+<!--        <parameter name="platformVersion" value="12.0"/>-->
+<!--        <parameter name="systemPort" value="8562"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.parallel.FillForms"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="Test 04">-->
+<!--        <parameter name="platformName" value="ios"/>-->
+<!--        <parameter name="udid" value="iPhone 13"/>-->
+<!--        <parameter name="platformVersion" value="13.0"/>-->
+<!--        <parameter name="systemPort" value="8563"/>-->
+<!--        <classes>-->
+<!--            <class name="tests.parallel.FillForms"/>-->
+<!--        </classes>-->
+<!--    </test>-->
 </suite>
