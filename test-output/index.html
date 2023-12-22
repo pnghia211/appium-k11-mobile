@@ -108,17 +108,17 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Regression" title="tests.parallel.LoginDevice01" class="method navigator-link" hash-for-method="testLogin(LoginData{email=&#039;teo@&#039;, password=&#039;12345678&#039;})">testLogin(LoginData{email='teo@', password='12345678'})</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression" title="tests.parallel.LoginDevice01" class="method navigator-link" hash-for-method="testLogin(LoginData{email=&#039;teo@sth.com&#039;, password=&#039;12345678&#039;})">testLogin(LoginData{email='teo@sth.com', password='12345678'})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Regression" title="tests.parallel.LoginDevice01" class="method navigator-link" hash-for-method="testLogin(LoginData{email=&#039;teo@sth.com&#039;, password=&#039;1234567&#039;})">testLogin(LoginData{email='teo@sth.com', password='1234567'})</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Regression" title="tests.parallel.LoginDevice01" class="method navigator-link" hash-for-method="testLogin(LoginData{email=&#039;teo@&#039;, password=&#039;12345678&#039;})">testLogin(LoginData{email='teo@', password='12345678'})</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Regression -->
@@ -156,6 +156,14 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
+                  <a name="testLogin(LoginData{email=&#039;teo@&#039;, password=&#039;12345678&#039;})">
+                  </a> <!-- testLogin(LoginData{email='teo@', password='12345678'}) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(LoginData{email='teo@', password='12345678'})</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
                   <a name="testLogin(LoginData{email=&#039;teo@sth.com&#039;, password=&#039;12345678&#039;})">
                   </a> <!-- testLogin(LoginData{email='teo@sth.com', password='12345678'}) -->
                   <span class="method-name">testLogin</span>
@@ -168,14 +176,6 @@
                   </a> <!-- testLogin(LoginData{email='teo@sth.com', password='1234567'}) -->
                   <span class="method-name">testLogin</span>
                   <span class="parameters">(LoginData{email='teo@sth.com', password='1234567'})</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testLogin(LoginData{email=&#039;teo@&#039;, password=&#039;12345678&#039;})">
-                  </a> <!-- testLogin(LoginData{email='teo@', password='12345678'}) -->
-                  <span class="method-name">testLogin</span>
-                  <span class="parameters">(LoginData{email='teo@', password='12345678'})</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -192,7 +192,7 @@
   &lt;test thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;emulator-5556&quot;&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;android&quot;/&gt;
     &lt;parameter name=&quot;udid&quot; value=&quot;emulator-5556&quot;/&gt;
-    &lt;parameter name=&quot;systemPort&quot; value=&quot;8648&quot;/&gt;
+    &lt;parameter name=&quot;systemPort&quot; value=&quot;9119&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.parallel.LoginDevice01&quot;/&gt;
     &lt;/classes&gt;
@@ -200,7 +200,7 @@
   &lt;test thread-count=&quot;10&quot; parallel=&quot;tests&quot; name=&quot;emulator-5554&quot;&gt;
     &lt;parameter name=&quot;platformName&quot; value=&quot;android&quot;/&gt;
     &lt;parameter name=&quot;udid&quot; value=&quot;emulator-5554&quot;/&gt;
-    &lt;parameter name=&quot;systemPort&quot; value=&quot;9075&quot;/&gt;
+    &lt;parameter name=&quot;systemPort&quot; value=&quot;8797&quot;/&gt;
     &lt;classes&gt;
       &lt;class name=&quot;tests.parallel.FillForms&quot;/&gt;
     &lt;/classes&gt;
@@ -249,24 +249,24 @@ data.addRows(4);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testLogin')
 data.setCell(0, 2, 'tests.parallel.LoginDevice01')
-data.setCell(0, 3, 14922);
+data.setCell(0, 3, 15802);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'testForms')
 data.setCell(1, 2, 'tests.parallel.FillForms')
-data.setCell(1, 3, 13866);
+data.setCell(1, 3, 14757);
 data.setCell(2, 0, 2)
 data.setCell(2, 1, 'testLogin')
 data.setCell(2, 2, 'tests.parallel.LoginDevice01')
-data.setCell(2, 3, 6446);
+data.setCell(2, 3, 6546);
 data.setCell(3, 0, 3)
 data.setCell(3, 1, 'testLogin')
 data.setCell(3, 2, 'tests.parallel.LoginDevice01')
-data.setCell(3, 3, 4840);
+data.setCell(3, 3, 4922);
 window.suiteTableData['Regression']= { tableData: data, tableDiv: 'times-div-Regression'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 26 seconds</span>
+              <span class="suite-total-time">Total running time: 27 seconds</span>
               <div id="times-div-Regression">
               </div> <!-- times-div-Regression -->
             </div> <!-- times-div -->
@@ -292,69 +292,66 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.parallel.FillForms</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">tests.parallel.LoginDevice01</div> <!-- chronological-class-name -->
               <div class="configuration-test before">
-                <span class="method-name">initAppiumSession(emulator-5554, 9075, android, platformVersion)</span>
+                <span class="method-name">initAppiumSession(emulator-5556, 9119, android, platformVersion)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-test before -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">tests.parallel.LoginDevice01</div> <!-- chronological-class-name -->
-              <div class="configuration-test before">
-                <span class="method-name">initAppiumSession(emulator-5556, 8648, android, platformVersion)</span>
-                <span class="method-start">1 ms</span>
-              </div> <!-- configuration-test before -->
-            </div> <!-- chronological-class -->
-            <div class="chronological-class">
               <div class="chronological-class-name">tests.parallel.FillForms</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">initAppiumSession(emulator-5554, 8797, android, platformVersion)</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
               <div class="test-method">
                 <span class="method-name">testForms</span>
-                <span class="method-start">46 ms</span>
+                <span class="method-start">53 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.parallel.LoginDevice01</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">testLogin(LoginData{email='teo@', password='12345678'})</span>
-                <span class="method-start">107 ms</span>
+                <span class="method-start">94 ms</span>
               </div> <!-- test-method -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.parallel.FillForms</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenshot([TestResult name=testForms status=SUCCESS method=FillForms.testForms()[pri:0, instance:tests.paralle...)</span>
-                <span class="method-start">13957 ms</span>
+                <span class="method-start">14851 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">quitAppiumSession</span>
-                <span class="method-start">13966 ms</span>
+                <span class="method-start">14859 ms</span>
               </div> <!-- configuration-test after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">tests.parallel.LoginDevice01</div> <!-- chronological-class-name -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenshot([TestResult name=testLogin status=SUCCESS method=LoginDevice01.testLogin(tests_data.models.LoginData...)</span>
-                <span class="method-start">15030 ms</span>
+                <span class="method-start">15898 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testLogin(LoginData{email='teo@sth.com', password='1234567'})</span>
-                <span class="method-start">15031 ms</span>
+                <span class="method-start">15899 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenshot([TestResult name=testLogin status=SUCCESS method=LoginDevice01.testLogin(tests_data.models.LoginData...)</span>
-                <span class="method-start">19872 ms</span>
+                <span class="method-start">20822 ms</span>
               </div> <!-- configuration-method after -->
               <div class="test-method">
                 <span class="method-name">testLogin(LoginData{email='teo@sth.com', password='12345678'})</span>
-                <span class="method-start">19873 ms</span>
+                <span class="method-start">20823 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">takeScreenshot([TestResult name=testLogin status=SUCCESS method=LoginDevice01.testLogin(tests_data.models.LoginData...)</span>
-                <span class="method-start">26320 ms</span>
+                <span class="method-start">27370 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-test after">
                 <span class="method-name">quitAppiumSession</span>
-                <span class="method-start">26321 ms</span>
+                <span class="method-start">27371 ms</span>
               </div> <!-- configuration-test after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
