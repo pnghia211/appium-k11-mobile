@@ -4,7 +4,7 @@
   <test thread-count="10" parallel="tests" name="emulator-5554(failed)">
     <parameter name="platformName" value="android"/>
     <parameter name="udid" value="emulator-5554"/>
-    <parameter name="systemPort" value="9068"/>
+    <parameter name="systemPort" value="9018"/>
     <classes>
       <class name="tests.parallel.FillForms">
         <methods>
@@ -16,19 +16,4 @@
       </class> <!-- tests.parallel.FillForms -->
     </classes>
   </test> <!-- emulator-5554(failed) -->
-  <test thread-count="10" parallel="tests" name="emulator-5556(failed)">
-    <parameter name="platformName" value="android"/>
-    <parameter name="udid" value="emulator-5556"/>
-    <parameter name="systemPort" value="9272"/>
-    <classes>
-      <class name="tests.parallel.LoginDevice01">
-        <methods>
-          <include name="initAppiumSession"/>
-          <include name="takeScreenshot"/>
-          <include name="quitAppiumSession"/>
-          <include name="testLogin" invocation-numbers="0 1 2"/>
-        </methods>
-      </class> <!-- tests.parallel.LoginDevice01 -->
-    </classes>
-  </test> <!-- emulator-5556(failed) -->
 </suite> <!-- Failed suite [Regression] -->

@@ -35,8 +35,12 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         }
 
         switch (platform) {
-            case android -> appiumDriver = new AndroidDriver<>(desiredCap);
-            case ios -> appiumDriver = new IOSDriver<>(desiredCap);
+            case android :
+                appiumDriver = new AndroidDriver<>(desiredCap);
+                break;
+            case ios :
+                appiumDriver = new IOSDriver<>(desiredCap);
+                break;
         }
 
         appiumDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
@@ -54,7 +58,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
             throw new IllegalArgumentException("[ERR] please provide env variable [remote]");
         }
 
-        String targetServer = "http://192.168.1.140:4444/wd/hub";
+        String targetServer = "http://192.168.1.140:4723/wd/hub";
         if (isRemote.equals("true")) {
             String hubIPAdd = System.getenv("hub");
             if (hubIPAdd == null) System.getProperty("hub");
@@ -94,6 +98,7 @@ public class DriverFactory implements MobileCapabilityTypeEx {
                     desiredCap.setCapability(BUNDLE_ID, "org.wdioNativeDemoApp");
                     desiredCap.setCapability(WDA_LOCAL_PORT, systemPort);
                     appiumDriver = new IOSDriver<>(appiumServer, desiredCap);
+                    break;
             }
             appiumDriver.manage().timeouts().implicitlyWait(2000, TimeUnit.MILLISECONDS);
         }
