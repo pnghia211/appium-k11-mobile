@@ -27,22 +27,7 @@ public class TestNGHook02 {
 
     @Test
     public void testSth01() {
-        System.out.println("\t\t\t\t" + this.getClass().getSimpleName() + " || Test method 01");
-    }
-
-    @Test
-    public void testSth02() {
-//        System.out.println("\t\t\t\t" + this.getClass().getSimpleName() + " || Test method 02");
-
-//        SoftAssert softAssert = new SoftAssert();
-//        softAssert.assertEquals("a","b");
-//        softAssert.assertEquals("c","d");
-//        softAssert.assertAll();
-
-        Verify verify = new Verify();
-        verify.verify("a","b");
-        verify.verify("c","d");
-        verify.verifyAll();
+        System.out.println("\t\t\t\t" + this.getClass().getSimpleName() + " || Test method 02");
     }
 
     @AfterMethod

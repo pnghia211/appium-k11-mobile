@@ -32,19 +32,24 @@ public class BaseTest {
     }
 
     @BeforeTest
-    @Parameters({"udid", "systemPort", "platformName", "platformVersion"})
-    public void initAppiumSession(String udid, String systemPort, String platformName,
-                                  @Optional("platformVersion") String platformVersion) {
-        this.udid = udid;
-        this.systemPort = systemPort;
-        this.platformName = platformName;
-        this.platformVersion = platformVersion;
+    public void initAppiumSession() {
         driverThread = ThreadLocal.withInitial(() -> {
             DriverFactory driverThread = new DriverFactory();
             threadDriverPool.add(driverThread);
             return driverThread;
         });
     }
+
+    @BeforeClass
+    @Parameters({"udid", "systemPort", "platformName", "platformVersion"})
+    public void beforeClass(String udid, String systemPort, String platformName,
+                            @Optional("platformVersion") String platformVersion) {
+        this.udid = udid;
+        this.systemPort = systemPort;
+        this.platformName = platformName;
+        this.platformVersion = platformVersion;
+    }
+
 
     @AfterTest(alwaysRun = true)
     public void quitAppiumSession() {

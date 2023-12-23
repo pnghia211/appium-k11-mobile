@@ -19,6 +19,7 @@ public class FormsComponent {
     private final By dropdownBtnSel = MobileBy.AccessibilityId("Dropdown");
     private final By dropdownListSel = MobileBy.id("android:id/text1");
     private final By activeBtnSel = MobileBy.AccessibilityId("button-Active");
+    private final By popupSel = MobileBy.id("android:id/button1");
 
 
     public FormsComponent(AppiumDriver<MobileElement> appiumDriver) {
@@ -61,6 +62,9 @@ public class FormsComponent {
 
     public void clickActiveBtn () {
         appiumDriver.findElement(activeBtnSel).click();
+        WebDriverWait wait = new WebDriverWait(appiumDriver,5);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(popupSel));
+        appiumDriver.findElement(popupSel).click();
     }
 
 }

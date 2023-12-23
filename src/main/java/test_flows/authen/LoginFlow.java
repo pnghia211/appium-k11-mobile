@@ -31,7 +31,6 @@ public class LoginFlow extends BaseFlow {
         if (!password.isEmpty()) {
             loginFormComp.inputPassword(password);
         }
-
         loginFormComp.clickLoginBtn();
     }
 
@@ -42,6 +41,7 @@ public class LoginFlow extends BaseFlow {
 
         if (isEmailValid && isPasswordValid) {
             verifyValidLogin(loginFormComp);
+            clickOkPopup(loginFormComp);
         }
 
         if (!isEmailValid) {
@@ -72,5 +72,10 @@ public class LoginFlow extends BaseFlow {
         String expectedPasswordString = "Please enter at least 8 characters";
         String actualPasswordString = loginFormComp.verifyInvalidPasswordStr();
         Assert.assertEquals(expectedPasswordString,actualPasswordString);
+    }
+
+    @Step("Click ok pop up")
+    private void clickOkPopup (LoginFormComponent loginFormComp) {
+        loginFormComp.clickOKPopup();
     }
 }

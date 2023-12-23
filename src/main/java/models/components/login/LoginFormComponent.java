@@ -23,6 +23,9 @@ public class LoginFormComponent {
     private final By invalidEmailSel = MobileBy.xpath("//*[contains(@text, \"Please enter a valid email address\")]");
     private final By invalidPasswordSel = MobileBy.xpath("//*[contains(@text, \"Please enter at least 8 characters\")]");
     private final By validLoginSel = MobileBy.xpath("//*[contains(@text, \"Success\")]");
+    private final By loginPopupSel = MobileBy.id("android:id/button1");
+
+
 
 
     public LoginFormComponent(AppiumDriver<MobileElement> appiumDriver) {
@@ -72,5 +75,9 @@ public class LoginFormComponent {
     @Step("Click login button")
     public void clickLoginBtn() {
         appiumDriver.findElement(loginBtnSel).click();
+    }
+
+    public void clickOKPopup () {
+        appiumDriver.findElement(loginPopupSel).click();
     }
 }
