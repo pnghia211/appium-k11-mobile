@@ -7,7 +7,7 @@ import tests.BaseTest;
 import tests_data.authen.DataObjectBuilder;
 import tests_data.models.LoginData;
 
-public class LoginDevice01 extends BaseTest {
+public class LoginTest extends BaseTest {
 
     @Test(dataProvider = "loginCredData")
     public void testLogin(LoginData loginData) {

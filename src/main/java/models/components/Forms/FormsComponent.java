@@ -19,6 +19,7 @@ public class FormsComponent {
     private final By dropdownBtnSel = MobileBy.AccessibilityId("Dropdown");
     private final By dropdownListSel = MobileBy.id("android:id/text1");
     private final By activeBtnSel = MobileBy.AccessibilityId("button-Active");
+    private final By inActiveBtnSel = MobileBy.AccessibilityId("button-Inactive");
     private final By popupSel = MobileBy.id("android:id/button1");
 
 
@@ -26,45 +27,56 @@ public class FormsComponent {
         this.appiumDriver = appiumDriver;
     }
 
-    public void inputField () {
+    public void inputField() {
         MobileElement inputFieldEle = appiumDriver.findElement(inputFieldSel);
         inputFieldEle.clear();
         inputFieldEle.sendKeys("alo123");
     }
 
-    public String getInput () {
+    public String getInput() {
         return appiumDriver.findElement(inputFieldSel).getText();
     }
 
-    public String getResultInput () {
+    public String getResultInput() {
         return appiumDriver.findElement(resultInputSel).getText();
     }
 
-    public void clickSwitchBtn () {
+    public void clickSwitchBtn() {
         appiumDriver.findElement(switchBtnSel).click();
     }
 
-    public void swipeUp () {
+    public void swipeUp() {
         SwipeEx swipeEx = new SwipeEx(appiumDriver);
         swipeEx.swipeUp();
     }
 
-    public void clickDropDown () {
+    public void clickDropDown() {
         appiumDriver.findElement(dropdownBtnSel).click();
-        WebDriverWait wait = new WebDriverWait(appiumDriver,5);
+        WebDriverWait wait = new WebDriverWait(appiumDriver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(dropdownListSel));
         List<MobileElement> dropdownELes = appiumDriver.findElements(MobileBy.id("android:id/text1"));
-        int Option1 = 1;
-        int Option2 = 2;
-        int Option3 = 3;
-        dropdownELes.get(Option3).click();
+        int WebDriverIOIsAwesome = 1;
+        int AppiumIsAwesome = 2;
+        int ThisAppIsAwesome = 3;
+        dropdownELes.get(ThisAppIsAwesome).click();
     }
 
-    public void clickActiveBtn () {
-        appiumDriver.findElement(activeBtnSel).click();
-        WebDriverWait wait = new WebDriverWait(appiumDriver,5);
+    public void clickActiveBtn() {
+        MobileElement activeBtn = appiumDriver.findElement(activeBtnSel);
+        if (!activeBtn.isEnabled()) {
+            Assert.fail("[ERR] click button is not enable!!!");
+        }
+        activeBtn.click();
+        WebDriverWait wait = new WebDriverWait(appiumDriver, 5);
         wait.until(ExpectedConditions.visibilityOfElementLocated(popupSel));
         appiumDriver.findElement(popupSel).click();
     }
 
+    public void clickInactiveBtn() {
+        MobileElement inactiveBtn = appiumDriver.findElement(inActiveBtnSel);
+        if (!inactiveBtn.isEnabled()) {
+            Assert.fail("[ERR] click button is not enable!!!");
+        }
+        appiumDriver.findElement(inActiveBtnSel).click();
+    }
 }

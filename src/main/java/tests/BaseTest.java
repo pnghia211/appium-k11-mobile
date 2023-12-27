@@ -28,6 +28,7 @@ public class BaseTest {
     private String platformVersion;
 
     public AppiumDriver<MobileElement> getDriver() {
+
         return driverThread.get().getDriver(Platform.valueOf(platformName), udid, systemPort, platformVersion);
     }
 

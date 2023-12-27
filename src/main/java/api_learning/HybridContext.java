@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class HybridContext implements Contexts {
+public class HybridContext {
     public static void main(String[] args) {
         AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
 
@@ -58,8 +58,7 @@ public class HybridContext implements Contexts {
                         itemsMenuData.add(new itemMenuData("discord", itemHref));
                     }
 //                menuItemData.put(text, href);
-                }
-                 else itemsMenuData.add(new itemMenuData(itemText, itemHref));
+                } else itemsMenuData.add(new itemMenuData(itemText, itemHref));
             }
 
             // Verification vie Map

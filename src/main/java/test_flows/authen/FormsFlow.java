@@ -47,4 +47,9 @@ public class FormsFlow extends BaseFlow {
         formsComp.clickActiveBtn();
     }
 
+    public void clickInactiveBtn () {
+        FormsComponent formsComp = new FormsComponent(appiumDriver);
+        formsComp.clickInactiveBtn();
+    }
+
 }

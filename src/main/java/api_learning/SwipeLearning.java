@@ -42,6 +42,7 @@ public class SwipeLearning {
                 swipe.swipeLeft();
             }
         }
+        appiumDriver.quit();
     }
 }
 

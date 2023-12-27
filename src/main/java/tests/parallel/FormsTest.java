@@ -3,9 +3,8 @@ package tests.parallel;
 import org.testng.annotations.Test;
 import test_flows.authen.FormsFlow;
 import tests.BaseTest;
-import tests_data.models.LoginData;
 
-public class FillForms extends BaseTest {
+public class FormsTest extends BaseTest {
 
     @Test
     public void testForms() {
@@ -16,6 +15,7 @@ public class FillForms extends BaseTest {
         formsFlow.swipeUp();
         formsFlow.clickSwitchBtn();
         formsFlow.clickDropDown();
+        formsFlow.clickInactiveBtn();
         formsFlow.clickActiveBtn();
         System.out.println("Session ID : " + getDriver().getSessionId());
     }

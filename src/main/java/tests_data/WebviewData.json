@@ -1,0 +1,46 @@
+[
+  {
+    "text": "Docs",
+    "href": "/docs/gettingstarted"
+  },
+  {
+    "text": "API",
+    "href": "/docs/api"
+  },
+  {
+    "text": "Blog",
+    "href": "/blog"
+  },
+  {
+    "text": "Contribute",
+    "href": "/docs/contribute"
+  },
+  {
+    "text": "Community",
+    "href": "/community/support"
+  },
+  {
+    "text": "v8",
+    "href": "/versions"
+  },
+  {
+    "text": "Languages",
+    "href": "null"
+  },
+  {
+    "text": "github",
+    "href": "https://github.com/webdriverio/webdriverio"
+  },
+  {
+    "text": "twitter",
+    "href": "https://twitter.com/webdriverio"
+  },
+  {
+    "text": "youtube",
+    "href": "https://youtube.com/@webdriverio"
+  },
+  {
+    "text": "discord",
+    "href": "https://discord.webdriver.io/"
+  }
+]

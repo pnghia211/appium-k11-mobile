@@ -12,7 +12,7 @@
 <!--        <parameter name="udid" value="emulator-5556"/>-->
 <!--        <parameter name="systemPort" value="8400"/>-->
 <!--        <classes>-->
-<!--            <class name="tests.parallel.LoginDevice01"/>-->
+<!--            <class name="tests.parallel.LoginTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
 <!--    <test name="Test 03">-->
@@ -21,7 +21,7 @@
 <!--        <parameter name="platformVersion" value="12.0"/>-->
 <!--        <parameter name="systemPort" value="8562"/>-->
 <!--        <classes>-->
-<!--            <class name="tests.parallel.FillForms"/>-->
+<!--            <class name="tests.parallel.FormsTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
 <!--    <test name="Test 04">-->
@@ -30,7 +30,7 @@
 <!--        <parameter name="platformVersion" value="13.0"/>-->
 <!--        <parameter name="systemPort" value="8563"/>-->
 <!--        <classes>-->
-<!--            <class name="tests.parallel.FillForms"/>-->
+<!--            <class name="tests.parallel.FormsTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
 </suite>

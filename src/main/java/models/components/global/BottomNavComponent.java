@@ -11,16 +11,25 @@ import platform.Platform;
 
 public class BottomNavComponent {
     private final AppiumDriver<MobileElement> appiumDriver;
+    private final By navHomeBtn = MobileBy.AccessibilityId("Home");
     private final By navLoginBtn = MobileBy.AccessibilityId("Login");
     private final By navFormsBtn = MobileBy.AccessibilityId("Forms");
+    private final By navWebviewBtn = MobileBy.AccessibilityId("Webview");
 
 
     public BottomNavComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
     }
 
+    public void clickNavHomeBtn () {
+        appiumDriver.findElement(navHomeBtn).click();
+    }
     public void clickNavFormsBtn () {
         appiumDriver.findElement(navFormsBtn).click();
+    }
+
+    public void clickWebviewBtn () {
+        appiumDriver.findElement(navWebviewBtn).click();
     }
 
     public void clickNavLoginBtn () {
