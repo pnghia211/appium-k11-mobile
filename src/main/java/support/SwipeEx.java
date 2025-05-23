@@ -19,7 +19,6 @@ public class SwipeEx {
 
     public void swipeUp() {
 
-
         // Calculate touch point
         int xStartPoint = 50 * getScreenWidth() / 100;
         int xEndPoint = 50 * getScreenWidth() / 100;
@@ -31,8 +30,11 @@ public class SwipeEx {
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
         PointOption endPoint = new PointOption<>().withCoordinates(xEndPoint, yEndPoint);
         TouchAction touchAction = new TouchAction(appiumDriver);
-        touchAction.press(startPoint).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
-                .moveTo(endPoint).release().perform();
+        touchAction.press(startPoint)
+                .waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
+                .moveTo(endPoint)
+                .release()
+                .perform();
     }
 
     public void swipeDown() {
@@ -41,15 +43,18 @@ public class SwipeEx {
         int xStartPoint = 50 * getScreenWidth() / 100;
         int xEndPoint = 50 * getScreenWidth() / 100;
 
-        int yStartPoint = 5 * getScreenHeight() / 100;
+        int yStartPoint = 0 * getScreenHeight() / 100;
         int yEndPoint = 80 * getScreenHeight() / 100;
 
         // Convert coordinate
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
         PointOption endPoint = new PointOption<>().withCoordinates(xEndPoint, yEndPoint);
         TouchAction touchAction = new TouchAction(appiumDriver);
-        touchAction.press(startPoint).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
-                .moveTo(endPoint).release().perform();
+        touchAction.press(startPoint)
+                .waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
+                .moveTo(endPoint)
+                .release()
+                .perform();
     }
 
     public void swipeLeft () {
@@ -65,8 +70,11 @@ public class SwipeEx {
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
         PointOption endPoint = new PointOption<>().withCoordinates(xEndPoint, yEndPoint);
         TouchAction touchAction = new TouchAction(appiumDriver);
-        touchAction.press(startPoint).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
-                .moveTo(endPoint).release().perform();
+        touchAction.press(startPoint)
+                .waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
+                .moveTo(endPoint)
+                .release()
+                .perform();
     }
 
     public void swipeRight () {
@@ -82,15 +90,16 @@ public class SwipeEx {
         PointOption startPoint = new PointOption<>().withCoordinates(xStartPoint, yStartPoint);
         PointOption endPoint = new PointOption<>().withCoordinates(xEndPoint, yEndPoint);
         TouchAction touchAction = new TouchAction(appiumDriver);
-        touchAction.press(endPoint).waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
-                .moveTo(startPoint).release().perform();
+        touchAction.press(endPoint)
+                .waitAction(new WaitOptions().withDuration(Duration.ofMillis(1000)))
+                .moveTo(startPoint)
+                .release()
+                .perform();
     }
-
 
     private int getScreenWidth () {
         Dimension screenSize = appiumDriver.manage().window().getSize();
         return screenSize.getWidth();
-
     }
 
     private int getScreenHeight () {

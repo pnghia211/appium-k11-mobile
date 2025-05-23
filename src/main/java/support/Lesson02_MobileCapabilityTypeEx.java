@@ -2,8 +2,7 @@ package support;
 
 import io.appium.java_client.remote.MobileCapabilityType;
 
-public interface MobileCapabilityTypeEx extends MobileCapabilityType {
-
+public interface Lesson02_MobileCapabilityTypeEx extends MobileCapabilityType {
     String PLATFORM_NAME = "platformName";
     String AUTOMATION_NAME = "automationName";
     String UDID = "udid";

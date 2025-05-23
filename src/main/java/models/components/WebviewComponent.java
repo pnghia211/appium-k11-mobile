@@ -5,11 +5,10 @@ import io.appium.java_client.MobileElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import platform.Contexts;
-import support.WaitContext;
+import support.WaitForContext;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 public class WebviewComponent {
 
@@ -21,7 +20,7 @@ public class WebviewComponent {
 
     public void switchWebviewContext() {
         WebDriverWait wait = new WebDriverWait(appiumDriver, 2);
-        wait.until(new WaitContext(appiumDriver));
+        wait.until(new WaitForContext(appiumDriver));
         appiumDriver.context(Contexts.WEB_VIEW);
     }
 
@@ -64,7 +63,7 @@ public class WebviewComponent {
 
     public void switchNativeContext() {
         WebDriverWait wait = new WebDriverWait(appiumDriver, 2);
-        wait.until(new WaitContext(appiumDriver));
+        wait.until(new WaitForContext(appiumDriver));
         appiumDriver.context(Contexts.NATIVE_APP);
     }
 

@@ -1,16 +1,16 @@
 package api_learning;
 
-import driver.DriverFactory;
+import driver.Lesson02_DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import platform.Platform;
+import platform.Lesson02_Platform;
 
-public class LoginFormTest {
+public class Lesson02_LoginFormTest {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
+        AppiumDriver<MobileElement> appiumDriver = Lesson02_DriverFactory.getDriver(Lesson02_Platform.android);
 
         try {
             MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
@@ -24,16 +24,14 @@ public class LoginFormTest {
             passwordEle.sendKeys("12345678");
             loginBtnEle.click();
 
-            WebDriverWait wait = new WebDriverWait(appiumDriver, 5);
+            WebDriverWait wait = new WebDriverWait(appiumDriver, 10);
+            wait.until(ExpectedConditions.visibilityOfElementLocated(MobileBy.id("android:id/alertTitle")));
             MobileElement loginPopUp = appiumDriver.findElement(MobileBy.id("android:id/alertTitle"));
             System.out.println(loginPopUp.getText());
-            wait.until(ExpectedConditions.visibilityOf(loginPopUp));
 
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         appiumDriver.quit();
     }
-
 }

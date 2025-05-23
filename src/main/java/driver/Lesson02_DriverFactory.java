@@ -5,16 +5,15 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.ios.IOSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
-import platform.Platform;
-import support.MobileCapabilityTypeEx;
-
+import platform.Lesson02_Platform;
+import support.Lesson02_MobileCapabilityTypeEx;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
-public class DriverFactory implements MobileCapabilityTypeEx {
+public class Lesson02_DriverFactory implements Lesson02_MobileCapabilityTypeEx {
     private AppiumDriver<MobileElement> appiumDriver;
 
-    public static AppiumDriver<MobileElement> getDriver(Platform platform) {
+    public static AppiumDriver<MobileElement> getDriver(Lesson02_Platform platform) {
         AppiumDriver<MobileElement> appiumDriver = null;
         DesiredCapabilities desiredCap = new DesiredCapabilities();
         desiredCap.setCapability(PLATFORM_NAME, "Android");
@@ -44,11 +43,10 @@ public class DriverFactory implements MobileCapabilityTypeEx {
         }
 
         appiumDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
-
         return appiumDriver;
     }
 
-    public AppiumDriver<MobileElement> getDriver(Platform platform, String udid, String systemPort, String platformVersion) {
+    public AppiumDriver<MobileElement> getDriver(Lesson02_Platform platform, String udid, String systemPort, String platformVersion) {
 
         String remoteInfoViaEnvVar = System.getenv("remote");
         String remoteInfoViaCommandVar = System.getProperty("remote");

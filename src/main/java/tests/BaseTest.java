@@ -1,6 +1,6 @@
 package tests;
 
-import driver.DriverFactory;
+import driver.Lesson02_DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.qameta.allure.Allure;
@@ -9,7 +9,7 @@ import org.openqa.selenium.OutputType;
 import org.testng.ITestResult;
 import org.testng.annotations.Optional;
 import org.testng.annotations.*;
-import platform.Platform;
+import platform.Lesson02_Platform;
 
 import java.io.File;
 import java.io.InputStream;
@@ -19,23 +19,21 @@ import java.nio.file.Paths;
 import java.util.*;
 
 public class BaseTest {
-    private static final List<DriverFactory> threadDriverPool = Collections.synchronizedList(new ArrayList<>());
-    private static ThreadLocal<DriverFactory> driverThread;
-
+    private static final List<Lesson02_DriverFactory> threadDriverPool = Collections.synchronizedList(new ArrayList<>());
+    private static ThreadLocal<Lesson02_DriverFactory> driverThread;
     private String udid;
     private String systemPort;
     private String platformName;
     private String platformVersion;
 
     public AppiumDriver<MobileElement> getDriver() {
-
-        return driverThread.get().getDriver(Platform.valueOf(platformName), udid, systemPort, platformVersion);
+        return driverThread.get().getDriver(Lesson02_Platform.valueOf(platformName), udid, systemPort, platformVersion);
     }
 
     @BeforeTest
     public void initAppiumSession() {
         driverThread = ThreadLocal.withInitial(() -> {
-            DriverFactory driverThread = new DriverFactory();
+            Lesson02_DriverFactory driverThread = new Lesson02_DriverFactory();
             threadDriverPool.add(driverThread);
             return driverThread;
         });
@@ -51,12 +49,10 @@ public class BaseTest {
         this.platformVersion = platformVersion;
     }
 
-
     @AfterTest(alwaysRun = true)
     public void quitAppiumSession() {
         driverThread.get().quitAppium();
     }
-
 
     @AfterMethod(description = "Taking screenshot if test fail")
     public void takeScreenshot(ITestResult result) {

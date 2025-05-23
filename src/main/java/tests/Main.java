@@ -5,14 +5,14 @@ import org.testng.TestNG;
 import org.testng.xml.XmlClass;
 import org.testng.xml.XmlSuite;
 import org.testng.xml.XmlTest;
-import platform.Platform;
-import support.MobileCapabilityTypeEx;
+import platform.Lesson02_Platform;
+import support.Lesson02_MobileCapabilityTypeEx;
 
 import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.*;
 
-public class Main implements MobileCapabilityTypeEx {
+public class Main implements Lesson02_MobileCapabilityTypeEx {
     @SuppressWarnings("UnstableApiUsage")
     public static void main(String[] args) throws IOException {
         final ClassLoader loader = Thread.currentThread().getContextClassLoader();
@@ -34,7 +34,7 @@ public class Main implements MobileCapabilityTypeEx {
         if (platformName == null) throw new IllegalArgumentException("[ERR] please provide platform via -Dplatform");
 
         try {
-            Platform.valueOf(platformName);
+            Lesson02_Platform.valueOf(platformName);
         } catch (Exception e) {
             throw new IllegalArgumentException("[ERR] we dont support platform: " + platformName);
         }
@@ -75,8 +75,7 @@ public class Main implements MobileCapabilityTypeEx {
             }
 
             // Add Xml classes into Xml test,
-
-            switch (Platform.valueOf(platformName)) {
+            switch (Lesson02_Platform.valueOf(platformName)) {
                 case android:
                     xmlTest.setXmlClasses(xmlClasses);
                     xmlTest.addParameter(PLATFORM_NAME, platformName);

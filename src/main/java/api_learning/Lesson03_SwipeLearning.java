@@ -1,20 +1,20 @@
 package api_learning;
 
-import driver.DriverFactory;
+import driver.Lesson02_DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import platform.Platform;
+import platform.Lesson02_Platform;
 import support.SwipeEx;
 
 import java.util.List;
 
-public class SwipeLearning {
+public class Lesson03_SwipeLearning {
     public static void main(String[] args) {
 
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
+        AppiumDriver<MobileElement> appiumDriver = Lesson02_DriverFactory.getDriver(Lesson02_Platform.android);
 
         WebDriverWait wait = new WebDriverWait(appiumDriver, 3);
         MobileElement navSwipeEle = appiumDriver.findElement(MobileBy.AccessibilityId("Swipe"));

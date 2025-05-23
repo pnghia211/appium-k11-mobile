@@ -1,16 +1,16 @@
 package api_learning;
 
-import driver.DriverFactory;
-import support.MobileCapabilityTypeEx;
+import driver.Lesson02_DriverFactory;
+import support.Lesson02_MobileCapabilityTypeEx;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.internal.CapabilityHelpers;
 import org.openqa.selenium.Capabilities;
-import platform.Platform;
+import platform.Lesson02_Platform;
 
-public class HandleVariantBehaviour implements MobileCapabilityTypeEx {
+public class HandleVariantBehaviour implements Lesson02_MobileCapabilityTypeEx {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
+        AppiumDriver<MobileElement> appiumDriver = Lesson02_DriverFactory.getDriver(Lesson02_Platform.android);
 
         try {
             Capabilities caps = appiumDriver.getCapabilities();
@@ -22,3 +22,5 @@ public class HandleVariantBehaviour implements MobileCapabilityTypeEx {
         }
     }
 }
+
+

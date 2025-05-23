@@ -1,5 +1,5 @@
 package platform;
 
-public enum Platform {
+public enum Lesson02_Platform {
     android, ios
 }

@@ -1,6 +1,6 @@
 package api_learning;
 
-import driver.DriverFactory;
+import driver.Lesson02_DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
@@ -8,13 +8,13 @@ import io.appium.java_client.TouchAction;
 import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.openqa.selenium.Dimension;
-import platform.Platform;
+import platform.Lesson02_Platform;
 
 import java.time.Duration;
 
 public class DragLearning {
 
-    static AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
+    static AppiumDriver<MobileElement> appiumDriver = Lesson02_DriverFactory.getDriver(Lesson02_Platform.android);
     public static void main(String[] args) {
 
         MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Drag"));

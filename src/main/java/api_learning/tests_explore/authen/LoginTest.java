@@ -1,10 +1,10 @@
 package api_learning.tests_explore.authen;
 
-import driver.DriverFactory;
+import driver.Lesson02_DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileElement;
 import org.testng.annotations.Test;
-import platform.Platform;
+import platform.Lesson02_Platform;
 import test_flows.authen.LoginFlow;
 
 import java.util.ArrayList;
@@ -14,7 +14,7 @@ public class LoginTest {
 
     @Test
     public static void testLogin() {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
+        AppiumDriver<MobileElement> appiumDriver = Lesson02_DriverFactory.getDriver(Lesson02_Platform.android);
 //        Map<String, String> loginMap = new HashMap<>();
         List<loginData> loginDataList = new ArrayList<>();
         loginDataList.add(new loginData("teo@","12345678"));

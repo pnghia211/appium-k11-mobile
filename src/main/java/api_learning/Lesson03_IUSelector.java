@@ -1,14 +1,14 @@
 package api_learning;
 
-import driver.DriverFactory;
+import driver.Lesson02_DriverFactory;
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
-import platform.Platform;
+import platform.Lesson02_Platform;
 
-public class IUSelector {
+public class Lesson03_IUSelector {
     public static void main(String[] args) {
-        AppiumDriver<MobileElement> appiumDriver = DriverFactory.getDriver(Platform.android);
+        AppiumDriver<MobileElement> appiumDriver = Lesson02_DriverFactory.getDriver(Lesson02_Platform.android);
 
         MobileElement navLoginBtn = appiumDriver.findElement(MobileBy.AccessibilityId("Login"));
         navLoginBtn.click();
