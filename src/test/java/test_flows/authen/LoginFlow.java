@@ -5,7 +5,12 @@ import io.appium.java_client.MobileElement;
 import models.components.login.LoginFormComponent;
 import models.pages.MainScreen;
 import org.apache.commons.validator.routines.EmailValidator;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import test_flows.BaseFlow;
+
+import java.time.Duration;
 
 public class LoginFlow extends BaseFlow {
 
@@ -73,6 +78,5 @@ public class LoginFlow extends BaseFlow {
         if (expectedPasswordString.equals(actualPasswordString)) {
             System.out.println("Verify invalid password successfully!!!");
         } else System.out.println("Verify invalid password fail");
-
     }
 }

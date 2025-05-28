@@ -1,0 +1,8 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 27 09:26:30 ICT 2023","Wed Dec 27 09:26:32 ICT 2023","1745","Regression","emulator-5556","tests.parallel.HomeTest","tests.parallel.HomeTest","testHome","testHome",""
+"passed","Wed Dec 27 09:26:16 ICT 2023","Wed Dec 27 09:26:30 ICT 2023","13784","Regression","emulator-5556","tests.parallel.FormsTest","tests.parallel.FormsTest","testForms","testForms",""
+"passed","Wed Dec 27 09:26:16 ICT 2023","Wed Dec 27 09:26:26 ICT 2023","9971","Regression","emulator-5554","tests.parallel.LoginTest","tests.parallel.LoginTest","testLogin","testLogin",""
+"passed","Wed Dec 27 09:26:38 ICT 2023","Wed Dec 27 09:27:09 ICT 2023","30901","Regression","emulator-5554","tests.parallel.SwipeTest","tests.parallel.SwipeTest","testWebview","testWebview",""
+"passed","Wed Dec 27 09:27:09 ICT 2023","Wed Dec 27 09:27:17 ICT 2023","8051","Regression","emulator-5554","tests.parallel.WebviewTest","tests.parallel.WebviewTest","testWebview","testWebview",""
+"passed","Wed Dec 27 09:26:31 ICT 2023","Wed Dec 27 09:26:38 ICT 2023","6880","Regression","emulator-5554","tests.parallel.LoginTest","tests.parallel.LoginTest","testLogin","testLogin",""
+"passed","Wed Dec 27 09:26:26 ICT 2023","Wed Dec 27 09:26:31 ICT 2023","4831","Regression","emulator-5554","tests.parallel.LoginTest","tests.parallel.LoginTest","testLogin","testLogin",""

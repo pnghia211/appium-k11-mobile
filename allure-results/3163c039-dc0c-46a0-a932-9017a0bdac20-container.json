@@ -1,0 +1,1 @@
+{"uuid":"3163c039-dc0c-46a0-a932-9017a0bdac20","name":"tests.parallel.SwipeTest","children":["cdb9b7e7-6679-4a0a-9fdc-0d0b7844a1e3"],"befores":[{"name":"beforeClass","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1703643998248,"stop":1703643998248}],"afters":[],"start":1703643976438,"stop":1703644037471}

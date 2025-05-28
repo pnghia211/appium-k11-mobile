@@ -4,19 +4,17 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.MobileElement;
 import org.openqa.selenium.By;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginFormComponent {
     private final AppiumDriver<MobileElement> appiumDriver;
     private final By userNameSel = MobileBy.AccessibilityId("input-email");
     private final  By passwordSel = MobileBy.AccessibilityId("input-password");
     private final By loginBtnSel = MobileBy.AccessibilityId("button-LOGIN");
-
     private final By invalidEmailSel = MobileBy.xpath("//*[contains(@text, \"Please enter a valid email address\")]");
     private final By invalidPasswordSel = MobileBy.xpath("//*[contains(@text, \"Please enter at least 8 characters\")]");
     private final By validLoginSel = MobileBy.xpath("//*[contains(@text, \"OK\")]");
-
-
-
 
     public LoginFormComponent(AppiumDriver<MobileElement> appiumDriver) {
         this.appiumDriver = appiumDriver;
@@ -37,6 +35,8 @@ public class LoginFormComponent {
     }
 
     public String verifyValidLoginStr() {
+        WebDriverWait wait = new WebDriverWait(appiumDriver,3);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(validLoginSel));
         return appiumDriver.findElement(validLoginSel).getText();
     }
 
