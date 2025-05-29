@@ -11,7 +11,7 @@ public class DataObjectBuilder {
     public static <T> T buildObjectData(String filePath, Class<T> dataType) {
         T objectData;
         String absoluteFilePath = System.getProperty("user.dir").concat(filePath);
-
+        System.out.println(absoluteFilePath);
         try (
                 Reader reader = Files.newBufferedReader(Paths.get(absoluteFilePath));
         ) {
@@ -24,7 +24,6 @@ public class DataObjectBuilder {
             e.printStackTrace();
             throw new RuntimeException(e.getMessage());
         }
-
         return objectData;
     }
 }
