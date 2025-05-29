@@ -8,17 +8,17 @@ import support.Verify;
 import java.util.HashMap;
 import java.util.Map;
 
-public class TestNGHook02 {
+public class TestNGHook02 extends BaseTestNG{
 
-    @BeforeSuite
-    public void beforeSuite() {
-        System.out.println(this.getClass().getSimpleName() + " || Before Suite");
-    }
-
-    @BeforeTest
-    public void beforeTest() {
-        System.out.println("\t" + this.getClass().getSimpleName() + " || Before Test");
-    }
+//    @BeforeSuite
+//    public void beforeSuite() {
+//        System.out.println(this.getClass().getSimpleName() + " || Before Suite");
+//    }
+//
+//    @BeforeTest
+//    public void beforeTest() {
+//        System.out.println("\t" + this.getClass().getSimpleName() + " || Before Test");
+//    }
 
     @BeforeClass
     public void beforeClass() {
@@ -31,12 +31,12 @@ public class TestNGHook02 {
     }
 
     @Test
-    public void testSth01() {
-        System.out.println("\t\t\t\t" + this.getClass().getSimpleName() + " || Test method 01");
+    public void testSth02_01() {
+        System.out.println("\t\t\t\t" + this.getClass().getSimpleName() + " || Test method 02");
     }
 
     @Test
-    public void testSth02() {
+    public void testSth02_02() {
 //        System.out.println("\t\t\t\t" + this.getClass().getSimpleName() + " || Test method 02");
 
 //        SoftAssert softAssert = new SoftAssert();
@@ -60,13 +60,13 @@ public class TestNGHook02 {
         System.out.println("\t\t" + this.getClass().getSimpleName() + " || After Class");
     }
 
-    @AfterTest
-    public void afterTest() {
-        System.out.println("\t" + this.getClass().getSimpleName() + " || After Test");
-    }
-
-    @AfterSuite
-    public void afterSuite() {
-        System.out.println(this.getClass().getSimpleName() + " || After Suite");
-    }
+//    @AfterTest
+//    public void afterTest() {
+//        System.out.println("\t" + this.getClass().getSimpleName() + " || After Test");
+//    }
+//
+//    @AfterSuite
+//    public void afterSuite() {
+//        System.out.println(this.getClass().getSimpleName() + " || After Suite");
+//    }
 }

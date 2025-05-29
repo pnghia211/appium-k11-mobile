@@ -52,5 +52,4 @@ public class LoginTestWithDataProvider {
         loginData loginData03 = new loginData("teo@sth.com","12345678");
         return new loginData[]{loginData01,loginData02,loginData03};
     }
-
 }

@@ -12,7 +12,7 @@ public class Verify {
     public void verify(String a, String b) {
         if (!a.equals(b)) {
             assertMap.put(a, b);
-            msgErrorList.add("[ERR] expected " + a + " but found " + b);
+            msgErrorList.add("[ERR] expected [" + a + "] but found [" + b + "]");
         }
     }
 
