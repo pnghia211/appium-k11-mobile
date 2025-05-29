@@ -6,4 +6,9 @@
             <class name="tests.authen.LoginTestWithBaseTest" />
         </classes>
     </test>
+    <test name="Authentication 02" >
+        <classes>
+            <class name="tests.authen.LoginTestWithBaseTest" />
+        </classes>
+    </test>
 </suite>

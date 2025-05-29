@@ -7,10 +7,11 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import platform.Platform;
 import test_flows.authen.LoginFlow;
+import tests.BaseTest;
 import tests_data.authen.DataObjectBuilder;
 import tests_data.models.LoginData;
 
-public class LoginTestWithDataBuilder {
+public class LoginTestWithDataBuilder extends BaseTest {
 
     @Test(dataProvider = "loginCredData")
     public static void testLogin(LoginData loginData) {
